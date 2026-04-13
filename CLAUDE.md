@@ -34,4 +34,4 @@ Sidebar order and nesting are controlled by `sidebar_position` frontmatter and d
 - Dark mode: `static/img/logo-dark.png`
 Both are sourced from the IntelliKeep brand assets at `../intellikeep/brand/`.
 
-**Production URL:** `https://docs.intellikeep.intellilar.com`
+**Production URL:** `https://intellikeep.intellilar.com`
