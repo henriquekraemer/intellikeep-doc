@@ -32,7 +32,7 @@ triggers:
   - trigger: event
     event_type: intellikeep_task_notification
     event_data:
-      event_type: overdue   # or "due_soon"
+      event_type: overdue   # or "approaching"
 ```
 
 Available event data fields: `task_id`, `title`, `message`, `event_type`.

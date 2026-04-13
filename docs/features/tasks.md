@@ -18,7 +18,7 @@ Tasks can be created from the panel UI or via the [`intellikeep.create_task`](..
 | **Name** | Task title |
 | **Priority** | `low`, `medium`, `high`, or `critical` |
 | **Due date** | When the task is due |
-| **Frequency** | Recurrence: `once`, `daily`, `weekly`, `monthly`, `yearly`, or a custom interval in days |
+| **Frequency** | Recurrence: `one_time`, `daily`, `weekly`, `monthly`, `yearly`, or `custom` (with `custom_days_interval`) |
 | **Linked entities** | HA areas or specific device IDs |
 | **Notify days before** | Override the global notification lead time for this task |
 | **Description** | Optional free-text description |
@@ -28,12 +28,12 @@ Tasks can be created from the panel UI or via the [`intellikeep.create_task`](..
 When a recurring task is completed, a new instance is automatically created with the next due date calculated from the frequency setting.
 
 Supported frequencies:
-- `once` — no recurrence
+- `one_time` — no recurrence
 - `daily`
 - `weekly`
 - `monthly`
 - `yearly`
-- Custom interval (specify a number of days)
+- `custom` — specify a number of days via `custom_days_interval`
 
 ## Priority levels
 
@@ -61,7 +61,6 @@ Each task has a dedicated Notes section. Notes are timestamped and record the au
 ## Activity log
 
 Every change to a task is recorded in its Activity Log:
-- Task created
 - Fields edited
 - Task completed (with completion timestamp)
 - Task reopened

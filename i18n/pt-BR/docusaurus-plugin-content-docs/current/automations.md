@@ -1,69 +1,69 @@
 ---
 sidebar_position: 7
-title: Automations
+title: Automações
 ---
 
-# Automations
+# Automações
 
-IntelliKeep integrates with Home Assistant automations through its sensor entities and notification events.
+O IntelliKeep se integra com as automações do Home Assistant por meio das suas entidades sensor e eventos de notificação.
 
-## Trigger on overdue task notification
+## Disparar em notificação de tarefa vencida
 
 ```yaml
 automation:
-  alias: Notify on overdue IntelliKeep task
+  alias: Notificar sobre tarefa IntelliKeep vencida
   triggers:
     - trigger: event
       event_type: intellikeep_task_notification
       event_data:
         event_type: overdue
   actions:
-    - action: notify.mobile_app_my_phone
+    - action: notify.mobile_app_meu_celular
       data:
         title: "{{ trigger.event.data.title }}"
         message: "{{ trigger.event.data.message }}"
 ```
 
-## Trigger on approaching task notification
+## Disparar em notificação de tarefa se aproximando do vencimento
 
 ```yaml
 automation:
-  alias: Notify when task is approaching due date
+  alias: Notificar quando tarefa estiver próxima do vencimento
   triggers:
     - trigger: event
       event_type: intellikeep_task_notification
       event_data:
         event_type: approaching
   actions:
-    - action: notify.mobile_app_my_phone
+    - action: notify.mobile_app_meu_celular
       data:
         title: "{{ trigger.event.data.title }}"
         message: "{{ trigger.event.data.message }}"
 ```
 
-## Trigger on sensor threshold
+## Disparar por limite no sensor
 
-Create a task when the number of overdue tasks exceeds a threshold:
+Criar uma tarefa quando o número de tarefas vencidas ultrapassa um limite:
 
 ```yaml
 automation:
-  alias: Alert when more than 3 tasks overdue
+  alias: Alertar quando mais de 3 tarefas estiverem vencidas
   triggers:
     - trigger: numeric_state
       entity_id: sensor.intellikeep_tasks_overdue
       above: 3
   actions:
-    - action: notify.mobile_app_my_phone
+    - action: notify.mobile_app_meu_celular
       data:
         title: "IntelliKeep"
-        message: "You have {{ states('sensor.intellikeep_tasks_overdue') }} overdue maintenance tasks."
+        message: "Você tem {{ states('sensor.intellikeep_tasks_overdue') }} tarefas de manutenção vencidas."
 ```
 
-## Create a task from an automation
+## Criar uma tarefa a partir de uma automação
 
 ```yaml
 automation:
-  alias: Schedule annual boiler service
+  alias: Agendar revisão anual da caldeira
   triggers:
     - trigger: time
       at: "09:00:00"
@@ -73,7 +73,7 @@ automation:
   actions:
     - action: intellikeep.create_task
       data:
-        name: Annual boiler service
+        name: Revisão anual da caldeira
         priority: high
         frequency: yearly
         due_date: "{{ (now() + timedelta(days=30)).isoformat() }}"

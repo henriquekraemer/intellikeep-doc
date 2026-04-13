@@ -36,7 +36,12 @@ const config: Config = {
   // useful metadata like html lang.
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en', 'pt-BR', 'es'],
+    localeConfigs: {
+      en: { label: 'English' },
+      'pt-BR': { label: 'Português (Brasil)' },
+      es: { label: 'Español' },
+    },
   },
 
   presets: [
@@ -74,6 +79,10 @@ const config: Config = {
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
+        },
+        {
+          type: 'localeDropdown',
+          position: 'right',
         },
         {
           href: 'https://github.com/intellilar/intellikeep',

@@ -27,6 +27,8 @@ show_description: false
 | `max_tasks` | number | `5` | Maximum number of tasks to display |
 | `show_linked_entities` | boolean | `true` | Show the linked area/device label on each task |
 | `show_description` | boolean | `false` | Show the task description text |
+| `filter_priority` | list | — | Only show tasks with these priorities: `low`, `medium`, `high`, `critical` |
+| `filter_status` | list | — | Only show tasks with these statuses: `pending`, `due`, `overdue`, `completed`, `snoozed` |
 
 ## Display
 
