@@ -15,13 +15,13 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://intellikeep.intellilar.com',
+  url: 'https://henriquekraemer.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/intellikeep-doc/',
 
   // GitHub pages deployment config.
-  organizationName: 'intellilar',
+  organizationName: 'henriquekraemer',
   projectName: 'intellikeep-doc',
 
   onBrokenLinks: 'throw',
@@ -50,7 +50,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/intellilar/intellikeep-doc/tree/main/',
+          editUrl: 'https://github.com/henriquekraemer/intellikeep-doc/tree/main/',
           routeBasePath: '/',
         },
         // Blog disabled — this is a pure documentation site.
