@@ -1,8 +1,8 @@
 # IntelliKeep Documentation
 
-Documentation site for the [IntelliKeep](https://github.com/intellilar/intellikeep) Home Assistant integration, built with [Docusaurus 3](https://docusaurus.io).
+Documentation site for the [IntelliKeep](https://github.com/henriquekraemer/intellikeep) Home Assistant integration, built with [Docusaurus 3](https://docusaurus.io).
 
-Published at: **https://intellikeep.intellilar.com**
+Published at: **https://henriquekraemer.github.io/intellikeep-doc/**
 
 ## Local development
 

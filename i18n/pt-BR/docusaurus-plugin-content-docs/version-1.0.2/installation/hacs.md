@@ -19,7 +19,7 @@ O HACS (Home Assistant Community Store) é o método de instalação recomendado
 3. Clique no menu de três pontos (⋮) → **Repositórios personalizados**
 4. Adicione a URL do repositório:
    ```
-   https://github.com/intellilar/intellikeep
+   https://github.com/henriquekraemer/intellikeep
    ```
    Selecione **Integração** como categoria e clique em **Adicionar**
 5. Pesquise por **IntelliKeep** na lista de Integrações do HACS e clique em **Baixar**

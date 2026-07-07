@@ -9,7 +9,7 @@ Usa la instalación manual si prefieres no usar HACS.
 
 ## Pasos
 
-1. Descarga o clona el [repositorio IntelliKeep](https://github.com/intellilar/intellikeep)
+1. Descarga o clona el [repositorio IntelliKeep](https://github.com/henriquekraemer/intellikeep)
 2. Copia el directorio `custom_components/intellikeep/` en el directorio de configuración de Home Assistant:
    ```
    config/custom_components/intellikeep/
