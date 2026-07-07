@@ -85,7 +85,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/intellilar/intellikeep',
+          href: 'https://github.com/henriquekraemer/intellikeep',
           label: 'GitHub',
           position: 'right',
         },
@@ -93,7 +93,7 @@ const config: Config = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} IntelliKeep · <a href="https://github.com/intellilar/intellikeep" target="_blank" rel="noopener noreferrer">GitHub</a>`,
+      copyright: `Copyright © ${new Date().getFullYear()} IntelliKeep · <a href="https://github.com/henriquekraemer/intellikeep" target="_blank" rel="noopener noreferrer">GitHub</a>`,
     },
     prism: {
       theme: prismThemes.github,
