@@ -25,9 +25,9 @@ All options can be updated after installation:
 
 ## Notification service
 
-Leave **Notification Service** empty to use only Home Assistant persistent notifications (the bell icon in the HA UI).
+Leave **Notification Service** empty if you only want Home Assistant persistent notifications (the bell icon in the UI).
 
-To also receive mobile push notifications, enter a `notify.*` service name. You can find available services in **Developer Tools → Actions**.
+To also get mobile push notifications, enter a `notify.*` service name. You can find the available services under **Developer Tools → Actions**.
 
 Example values:
 - `notify.mobile_app_my_phone`

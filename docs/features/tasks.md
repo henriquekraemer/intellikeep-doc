@@ -5,7 +5,7 @@ title: Tasks
 
 # Tasks
 
-The Tasks view is the main panel in IntelliKeep. It shows all pending and completed tasks with powerful filtering and search.
+The Tasks view is the main panel in IntelliKeep. It lists every pending and completed task, with filtering and search to help you find them.
 
 ## Creating a task
 
@@ -28,12 +28,12 @@ Tasks can be created from the panel UI or via the [`intellikeep.create_task`](..
 When a recurring task is completed, a new instance is automatically created with the next due date calculated from the frequency setting.
 
 Supported frequencies:
-- `one_time` — no recurrence
+- `one_time` (no recurrence)
 - `daily`
 - `weekly`
 - `monthly`
 - `yearly`
-- `custom` — specify a number of days via `custom_days_interval`
+- `custom` (set the number of days with `custom_days_interval`)
 
 ## Priority levels
 
@@ -49,14 +49,14 @@ Priorities are displayed as a color-coded bar on each task card:
 ## Filtering and search
 
 The Tasks view supports filtering by:
-- **Area** — show tasks linked to a specific HA area
-- **Device** — show tasks linked to a specific device
-- **Priority** — filter by one or more priority levels
-- **Free-text search** — filter by task name
+- **Area**: tasks linked to a specific HA area
+- **Device**: tasks linked to a specific device
+- **Priority**: one or more priority levels
+- **Free-text search**: by task name
 
 ## Notes
 
-Each task has a dedicated Notes section. Notes are timestamped and record the author (HA user who added them). Notes can be added, viewed, and deleted from the task detail view.
+Each task has its own Notes section. Every note is timestamped and records the HA user who added it. You can add, view, and delete notes from the task detail view.
 
 ## Activity log
 

@@ -5,7 +5,7 @@ title: History
 
 # Execution History
 
-The History view shows a complete log of every completed task execution across all tasks.
+The History view shows every completed task execution, across all tasks, in one log.
 
 ## Columns
 
@@ -19,12 +19,12 @@ The displayed columns are configurable. Available columns include:
 ## Filtering
 
 Filter the history log by:
-- **Area** — show completions for tasks linked to a specific area
-- **Device** — show completions for tasks linked to a specific device
+- **Area**: completions for tasks linked to a specific area
+- **Device**: completions for tasks linked to a specific device
 
 ## Export
 
-Click **Export CSV** to download the current (filtered) history as a `.csv` file for use in spreadsheets or reports.
+Click **Export CSV** to download the current (filtered) history as a `.csv` file for use in a spreadsheet or a report.
 
 ## Print
 

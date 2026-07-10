@@ -5,11 +5,11 @@ title: Lovelace Card
 
 # Lovelace Card
 
-IntelliKeep includes a custom Lovelace card for compact dashboard display of due and overdue tasks.
+IntelliKeep ships with a custom Lovelace card that shows due and overdue tasks in a compact form on your dashboard.
 
 ## Adding the card
 
-In your Home Assistant dashboard, add a new card and choose **Custom: IntelliKeep Card**. Or add it manually in YAML mode:
+On your Home Assistant dashboard, add a new card and pick **Custom: IntelliKeep Card**. You can also add it by hand in YAML mode:
 
 ```yaml
 type: custom:intellikeep-card
@@ -32,10 +32,10 @@ show_description: false
 
 ## Display
 
-The card shows tasks sorted by urgency (overdue first, then by due date). Each task row displays:
+The card sorts tasks by urgency, with overdue ones first and the rest by due date. Each row shows:
 - Priority color bar
 - Task name
-- Due date (or "Overdue" label)
-- Linked entity (if `show_linked_entities: true`)
+- Due date, or an "Overdue" label
+- Linked entity, when `show_linked_entities` is `true`
 
-Clicking a task row opens the full task detail in the IntelliKeep panel.
+Clicking a row opens the full task detail in the IntelliKeep panel.

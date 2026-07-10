@@ -5,7 +5,7 @@ title: Services
 
 # Services
 
-IntelliKeep exposes the following Home Assistant service actions. Use them in automations, scripts, or the Developer Tools → Actions panel.
+IntelliKeep exposes the Home Assistant service actions below. You can call them from automations, scripts, or the Developer Tools → Actions panel.
 
 ## `intellikeep.create_task`
 
@@ -103,7 +103,7 @@ Add a timestamped note to an existing task.
 action: intellikeep.add_task_note
 data:
   task_id: "<task_id>"
-  content: "Noticed some wear on the belt — monitor next month."
+  content: "Noticed some wear on the belt. Monitor next month."
   added_by: "Henrique"
 ```
 

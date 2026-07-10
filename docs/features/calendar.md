@@ -5,16 +5,16 @@ title: Calendar
 
 # Calendar
 
-The Calendar view displays tasks on a visual grid by their due dates.
+The Calendar view lays tasks out on a grid by their due dates.
 
 ## Views
 
-- **Week** — shows tasks distributed across the 7 days of the current week
-- **Month** — shows tasks as dots on a monthly calendar
+- **Week**: tasks spread across the seven days of the current week
+- **Month**: tasks shown as dots on a monthly calendar
 
 ## Navigation
 
-- Use the **Previous / Next** arrows to move between weeks or months
+- Use the **Previous** and **Next** arrows to move between weeks or months
 - Click **Today** to jump back to the current period
 
 ## Filtering

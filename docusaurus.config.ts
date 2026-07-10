@@ -6,7 +6,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'IntelliKeep',
-  tagline: 'Clear, structured documentation for every feature and workflow.',
+  tagline: 'Home maintenance tasks, tracked and reminded, right inside Home Assistant.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -53,7 +53,7 @@ const config: Config = {
           editUrl: 'https://github.com/henriquekraemer/intellikeep-doc/tree/main/',
           routeBasePath: '/',
         },
-        // Blog disabled — this is a pure documentation site.
+        // Blog disabled, this is a pure documentation site.
         blog: false,
         theme: {
           customCss: './src/css/custom.css',

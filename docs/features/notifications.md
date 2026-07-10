@@ -7,14 +7,14 @@ title: Notifications & Sensors
 
 ## Notifications
 
-IntelliKeep sends reminders when tasks are approaching or past their due date.
+IntelliKeep sends reminders as tasks approach their due date, and again once they are overdue.
 
 ### How notifications work
 
-- Notification checks run **every hour**
-- A reminder is sent **N days before** a task's due date (configurable globally and per task)
-- Overdue tasks also trigger a notification
-- Notification deduplication is in-memory and resets on HA restart
+- Checks run once an hour
+- A reminder goes out N days before the due date (set globally, or per task)
+- Overdue tasks trigger their own notification
+- Deduplication is kept in memory and resets when Home Assistant restarts
 
 ### Notification channels
 
@@ -48,5 +48,5 @@ IntelliKeep creates three sensor entities that you can use in dashboards and aut
 | `sensor.intellikeep_next_due_task` | Name and due date of the next upcoming task |
 
 Sensor state is refreshed:
-- Immediately after any service action that changes task data
-- Every 5 minutes via the scheduled coordinator refresh
+- Right after any service action that changes task data
+- Every 5 minutes through the scheduled coordinator refresh

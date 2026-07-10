@@ -19,7 +19,7 @@ title: Troubleshooting
 
 ## Tasks appear overdue unexpectedly
 
-1. Check the Home Assistant **system time and timezone** — IntelliKeep uses HA system time
+1. Check the Home Assistant **system time and timezone**, since IntelliKeep relies on HA system time
 2. Confirm the stored `due_date` value in the task's diagnostics
 3. Open the task's **Activity Log** to see whether it was completed and then reopened
 
@@ -32,7 +32,7 @@ title: Troubleshooting
 
 ## Known limitations
 
-- IntelliKeep is **single-instance** — only one integration entry per Home Assistant instance
+- IntelliKeep is single-instance. Only one integration entry is allowed per Home Assistant instance
 - Task data is stored locally and is not shared between HA instances
-- Notification deduplication is in-memory and **resets after an HA restart**
-- Sensors summarize task state; individual task entities are not created
+- Notification deduplication is kept in memory and resets after an HA restart
+- Sensors summarize task state. Individual task entities are not created
