@@ -28,12 +28,20 @@ config/
     └── intellikeep/
         ├── __init__.py
         ├── manifest.json
+        ├── brand/
+        │   ├── icon.png
+        │   ├── logo.png
+        │   └── ...
         ├── frontend/
         │   ├── intellikeep-card.js
+        │   ├── intellikeep-icons.js
         │   └── intellikeep-panel.js
+        ├── translations/
         └── ...
 ```
 
+The frontend bundles are already built and included in the repository, so there is nothing to compile.
+
 ## Updating manually
 
-To update, repeat the steps above: download the latest release and overwrite the `custom_components/intellikeep/` directory, then restart Home Assistant.
+To update, download the latest release, replace the whole `custom_components/intellikeep/` directory (not just some of its files), and restart Home Assistant. If you are moving from 1.x to 2.x, read [Upgrading from 1.x](./upgrading) first.

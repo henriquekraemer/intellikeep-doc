@@ -5,26 +5,29 @@ title: Instalar via HACS
 
 # Instalar via HACS
 
-O HACS (Home Assistant Community Store) é o método de instalação recomendado.
+O HACS (Home Assistant Community Store) é a forma de instalação recomendada. Ele também avisa você quando sai uma nova versão.
 
 ## Pré-requisitos
 
 - [HACS](https://hacs.xyz) instalado na sua instância do Home Assistant
-- Home Assistant 2024.1 ou superior
+- Home Assistant 2026.1 ou mais recente
 
-## Passos
+## Passo a passo
 
 1. Abra o **HACS** na barra lateral do Home Assistant
-2. Vá em **Integrações**
-3. Clique no menu de três pontos (⋮) → **Repositórios personalizados**
-4. Adicione a URL do repositório:
+2. Clique no menu de três pontos (⋮) no canto superior direito → **Repositórios personalizados**
+3. Adicione a URL do repositório:
    ```
    https://github.com/henriquekraemer/intellikeep
    ```
-   Selecione **Integração** como categoria e clique em **Adicionar**
-5. Pesquise por **IntelliKeep** na lista de Integrações do HACS e clique em **Baixar**
-6. **Reinicie o Home Assistant**
-7. Vá em **Configurações → Dispositivos e Serviços → Adicionar Integração**
-8. Pesquise por **IntelliKeep** e siga o assistente de configuração
+   Escolha **Integração** como tipo e clique em **Adicionar**
+4. Procure por **IntelliKeep** no HACS e clique em **Baixar**
+5. **Reinicie o Home Assistant**
+6. Vá em **Configurações → Dispositivos & serviços → Adicionar integração**
+7. Procure por **IntelliKeep** e siga o assistente de configuração
 
-Após a configuração, o **painel IntelliKeep** aparecerá automaticamente na barra lateral do Home Assistant.
+Depois da configuração, o **painel do IntelliKeep** aparece na barra lateral do Home Assistant, e o [card de dashboard](../lovelace-card) já pode ser adicionado a qualquer dashboard.
+
+## Atualizando
+
+Quando o HACS mostrar uma atualização do IntelliKeep, baixe-a e reinicie o Home Assistant. Leia antes o [changelog](https://github.com/henriquekraemer/intellikeep/blob/main/CHANGELOG.md) e, se estiver passando da 1.x para a 2.x, leia [Atualizando da 1.x](./upgrading).

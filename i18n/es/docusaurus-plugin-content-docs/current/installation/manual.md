@@ -1,26 +1,26 @@
 ---
 sidebar_position: 2
-title: Instalación Manual
+title: Instalación manual
 ---
 
-# Instalación Manual
+# Instalación manual
 
 Usa la instalación manual si prefieres no usar HACS.
 
 ## Pasos
 
-1. Descarga o clona el [repositorio IntelliKeep](https://github.com/henriquekraemer/intellikeep)
+1. Descarga o clona el [repositorio de IntelliKeep](https://github.com/henriquekraemer/intellikeep)
 2. Copia el directorio `custom_components/intellikeep/` en el directorio de configuración de Home Assistant:
    ```
    config/custom_components/intellikeep/
    ```
 3. **Reinicia Home Assistant**
-4. Ve a **Configuración → Dispositivos y Servicios → Agregar Integración**
+4. Ve a **Configuración → Dispositivos y servicios → Añadir integración**
 5. Busca **IntelliKeep** y sigue el asistente de configuración
 
 ## Estructura de directorios
 
-Tras copiar, el directorio de configuración debe contener:
+Después de copiarlo, tu directorio de configuración debería contener:
 
 ```
 config/
@@ -28,12 +28,20 @@ config/
     └── intellikeep/
         ├── __init__.py
         ├── manifest.json
+        ├── brand/
+        │   ├── icon.png
+        │   ├── logo.png
+        │   └── ...
         ├── frontend/
         │   ├── intellikeep-card.js
+        │   ├── intellikeep-icons.js
         │   └── intellikeep-panel.js
+        ├── translations/
         └── ...
 ```
 
-## Actualización manual
+Los paquetes del frontend ya vienen compilados e incluidos en el repositorio, así que no hay nada que compilar.
 
-Para actualizar, repite los pasos anteriores: descarga la última versión y reemplaza el directorio `custom_components/intellikeep/`, luego reinicia Home Assistant.
+## Actualizar manualmente
+
+Para actualizar, descarga la última versión, reemplaza todo el directorio `custom_components/intellikeep/` (no solo algunos de sus archivos) y reinicia Home Assistant. Si pasas de la 1.x a la 2.x, lee primero [Actualizar desde la 1.x](./upgrading).

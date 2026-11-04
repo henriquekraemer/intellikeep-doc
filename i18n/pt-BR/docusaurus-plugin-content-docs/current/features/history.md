@@ -3,29 +3,45 @@ sidebar_position: 3
 title: Histórico
 ---
 
-# Histórico de Execuções
+# Histórico
 
-A visualização de Histórico exibe um registro completo de todas as execuções de tarefas concluídas.
+A aba **Histórico** reúne todas as conclusões, de todas as tarefas, em um único registro.
 
-## Colunas
+<img
+  src={require('@site/static/img/screenshots/history-desktop.png').default}
+  alt="Histórico de conclusões mostrando quem fez cada tarefa e se ela foi feita no prazo ou com atraso"
+  className="ik-screenshot"
+/>
 
-As colunas exibidas são configuráveis. As colunas disponíveis incluem:
-- Nome da tarefa
-- Data e hora de conclusão
-- Concluída por (usuário do HA)
-- Prioridade
-- Área / dispositivo vinculado
+## O que cada registro mostra
 
-## Filtros
+- O ícone, o nome e o número da tarefa
+- Quando ela foi concluída, em tempo relativo, como *Hoje, 19:16* (passe o mouse por cima para ver a data e a hora completas)
+- Quem a concluiu
+- Uma etiqueta **No prazo** ou **N dias de atraso**
 
-Filtre o registro de histórico por:
-- **Área** — exibir conclusões de tarefas vinculadas a uma área específica
-- **Dispositivo** — exibir conclusões de tarefas vinculadas a um dispositivo específico
+Clique em um registro para abrir a tarefa dele.
 
-## Exportar
+## Período
 
-Clique em **Exportar CSV** para baixar o histórico atual (filtrado) como um arquivo `.csv` para uso em planilhas ou relatórios.
+Por padrão, o histórico mostra os **Últimos 30 dias**. Você também pode escolher **Últimos 7 dias**, **Últimos 90 dias**, **Últimos 12 meses** ou **Todo o período**.
 
-## Imprimir
+## Busca e filtros
 
-Clique em **Imprimir** para abrir uma visualização amigável para impressão do histórico de execuções.
+Busque no histórico por tarefa ou filtre por **área** e **dispositivo**, combinados como *Área OU dispositivo* ou *Área E dispositivo*, como na aba [Tarefas](./tasks#search-and-filters).
+
+## Colunas, exportação e impressão
+
+O menu ⋮ tem:
+
+- **Colunas**: escolhe quais colunas aparecem. As colunas **Áreas** e **Dispositivos** começam ocultas
+- **Exportar CSV**: baixa os registros exibidos no momento como um arquivo `.csv`, para uma planilha ou um relatório
+- **Imprimir**: abre uma versão do histórico pronta para impressão
+
+## No celular
+
+No celular, os registros viram uma lista agrupada por dia (**Hoje**, **Ontem** e depois a data), cada um com a hora, quem concluiu e se foi no prazo.
+
+## Desfazendo uma conclusão
+
+[Reabrir uma tarefa](./tasks#reopening-a-task) remove o registro da conclusão dela do histórico.

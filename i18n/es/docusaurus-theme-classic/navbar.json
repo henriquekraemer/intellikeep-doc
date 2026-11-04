@@ -1,10 +1,6 @@
 {
-  "title": {
-    "message": "IntelliKeep",
-    "description": "The title in the navbar"
-  },
   "logo.alt": {
-    "message": "Logo IntelliKeep",
+    "message": "IntelliKeep",
     "description": "The alt text of navbar logo"
   },
   "item.label.Docs": {

@@ -63,14 +63,16 @@ const config: Config = {
   ],
 
   themeConfig: {
+    // Social card shown when a page is shared (Open Graph / Twitter)
+    image: 'img/social-card.png',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'IntelliKeep',
+      // The logo is the full IntelliKeep wordmark, so no title next to it
       logo: {
-        alt: 'IntelliKeep Logo',
-        src: 'img/intellikeep-icon.png',
+        alt: 'IntelliKeep',
+        src: 'img/logo.png',
         srcDark: 'img/logo-dark.png',
       },
       items: [
@@ -79,6 +81,10 @@ const config: Config = {
           sidebarId: 'docsSidebar',
           position: 'left',
           label: 'Docs',
+        },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
         },
         {
           type: 'localeDropdown',

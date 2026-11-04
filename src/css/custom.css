@@ -1,27 +1,87 @@
 /**
  * IntelliKeep — global theme overrides (Infima + Docusaurus classic)
- * Brand green: #3ECC5F
+ *
+ * Brand colors (from the IntelliKeep brand assets):
+ *   Teal  #133A43  — "Intelli" and the house outline (light theme)
+ *   Green #12A37F  — "Keep" and the gear (light theme)
+ *   Mint  #5EE6A8  — "Keep" and the gear (dark theme)
  */
 
 :root {
-  --ifm-color-primary: #34b854;
-  --ifm-color-primary-dark: #2ea54b;
-  --ifm-color-primary-darker: #2b9c47;
-  --ifm-color-primary-darkest: #24813a;
-  --ifm-color-primary-light: #3acb5d;
-  --ifm-color-primary-lighter: #3ecc5f;
-  --ifm-color-primary-lightest: #55d272;
+  --ik-brand-teal: #133a43;
+  --ik-brand-green: #12a37f;
+  --ik-brand-mint: #5ee6a8;
+
+  --ifm-color-primary: #12a37f;
+  --ifm-color-primary-dark: #109372;
+  --ifm-color-primary-darker: #0f8b6c;
+  --ifm-color-primary-darkest: #0d7259;
+  --ifm-color-primary-light: #14b38c;
+  --ifm-color-primary-lighter: #15bb92;
+  --ifm-color-primary-lightest: #17d4a5;
+
+  /* The brand green is too light for body-size text on white: links and
+     active items use the darkest shade, which passes WCAG AA (5.9:1). */
+  --ifm-link-color: var(--ifm-color-primary-darkest);
+  --ifm-menu-color-active: var(--ifm-color-primary-darkest);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary-darkest);
+
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #3ecc5f;
-  --ifm-color-primary-dark: #2eba50;
-  --ifm-color-primary-darker: #2bb04c;
-  --ifm-color-primary-darkest: #24913f;
-  --ifm-color-primary-light: #55d272;
-  --ifm-color-primary-lighter: #62d57c;
-  --ifm-color-primary-lightest: #7ddb93;
+  --ifm-color-primary: #5ee6a8;
+  --ifm-color-primary-dark: #42e299;
+  --ifm-color-primary-darker: #34df91;
+  --ifm-color-primary-darkest: #1ec479;
+  --ifm-color-primary-light: #7aeab7;
+  --ifm-color-primary-lighter: #88edbf;
+  --ifm-color-primary-lightest: #b2f3d5;
+
+  --ifm-link-color: var(--ifm-color-primary);
+  --ifm-menu-color-active: var(--ifm-color-primary);
+  --ifm-navbar-link-hover-color: var(--ifm-color-primary);
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Footer in the brand teal, with white text and mint links */
+.footer--dark {
+  --ifm-footer-background-color: var(--ik-brand-teal);
+  --ifm-footer-color: #ffffff;
+  --ifm-footer-link-color: var(--ik-brand-mint);
+  --ifm-footer-link-hover-color: #ffffff;
+}
+
+/* The copyright is raw HTML, so its link doesn't get the footer link color */
+.footer--dark .footer__copyright a {
+  color: var(--ifm-footer-link-color);
+}
+
+.footer--dark .footer__copyright a:hover {
+  color: var(--ifm-footer-link-hover-color);
+}
+
+/* The navbar logo is the full wordmark, so it needs no title next to it */
+.navbar__logo {
+  height: 1.75rem;
+}
+
+/* Screenshots: rounded, bordered, never wider than the text column */
+.ik-screenshot {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto var(--ifm-leading);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+}
+
+.ik-screenshot--phone {
+  max-width: min(100%, 280px);
+}
+
+.ik-screenshot--card {
+  max-width: min(100%, 420px);
 }

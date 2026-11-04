@@ -3,29 +3,45 @@ sidebar_position: 3
 title: Historial
 ---
 
-# Historial de Ejecuciones
+# Historial
 
-La vista de Historial muestra un registro completo de todas las ejecuciones de tareas completadas.
+La pestaña **Historial** reúne en un solo registro todas las finalizaciones, de todas las tareas.
 
-## Columnas
+<img
+  src={require('@site/static/img/screenshots/history-desktop.png').default}
+  alt="Historial de finalizaciones con quién hizo cada tarea y si fue a tiempo o con retraso"
+  className="ik-screenshot"
+/>
 
-Las columnas mostradas son configurables. Las columnas disponibles incluyen:
-- Nombre de la tarea
-- Fecha y hora de finalización
-- Completada por (usuario de HA)
-- Prioridad
-- Área / dispositivo vinculado
+## Qué muestra cada registro
 
-## Filtros
+- El icono, el nombre y el número de la tarea
+- Cuándo se completó, en tiempo relativo, como *Hoy, 19:16* (pasa el cursor por encima para ver la fecha y la hora completas)
+- Quién la completó
+- Una etiqueta **A tiempo** o **N días de retraso**
 
-Filtra el registro de historial por:
-- **Área** — mostrar finalizaciones de tareas vinculadas a un área específica
-- **Dispositivo** — mostrar finalizaciones de tareas vinculadas a un dispositivo específico
+Haz clic en un registro para abrir su tarea.
 
-## Exportar
+## Periodo
 
-Haz clic en **Exportar CSV** para descargar el historial actual (filtrado) como archivo `.csv` para su uso en hojas de cálculo o informes.
+De forma predeterminada, el historial muestra los **Últimos 30 días**. También puedes elegir **Últimos 7 días**, **Últimos 90 días**, **Últimos 12 meses** o **Todo el periodo**.
 
-## Imprimir
+## Búsqueda y filtros
 
-Haz clic en **Imprimir** para abrir una vista optimizada para impresión del historial de ejecuciones.
+Busca en el historial por tarea, o fíltralo por **área** y **dispositivo**, combinados como *Área O dispositivo* o *Área Y dispositivo*, igual que en la pestaña [Tareas](./tasks#search-and-filters).
+
+## Columnas, exportación e impresión
+
+El menú ⋮ incluye:
+
+- **Columnas**: elige qué columnas se muestran. Las columnas **Áreas** y **Dispositivos** empiezan ocultas
+- **Exportar CSV**: descarga los registros que se muestran en ese momento como un archivo `.csv`, para una hoja de cálculo o un informe
+- **Imprimir**: abre una versión del historial lista para imprimir
+
+## En el teléfono
+
+En el teléfono, los registros son una lista agrupada por día (**Hoy**, **Ayer** y, después, la fecha), cada uno con la hora, quién completó la tarea y si fue a tiempo.
+
+## Deshacer una finalización
+
+[Reabrir una tarea](./tasks#reopening-a-task) elimina su registro de finalización del historial.

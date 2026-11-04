@@ -3,29 +3,45 @@ sidebar_position: 3
 title: History
 ---
 
-# Execution History
+# History
 
-The History view shows every completed task execution, across all tasks, in one log.
+The **History** tab lists every task completion, across all tasks, in one log.
 
-## Columns
+<img
+  src={require('@site/static/img/screenshots/history-desktop.png').default}
+  alt="Completion history with who did each task and whether it was on time or late"
+  className="ik-screenshot"
+/>
 
-The displayed columns are configurable. Available columns include:
-- Task name
-- Completion date and time
-- Completed by (HA user)
-- Priority
-- Linked area / device
+## What each record shows
 
-## Filtering
+- The task icon, name and number
+- When it was completed, as a relative time such as *Today, 19:16* (hover it for the full timestamp)
+- Who completed it
+- An **On time** or **N days late** chip
 
-Filter the history log by:
-- **Area**: completions for tasks linked to a specific area
-- **Device**: completions for tasks linked to a specific device
+Click a record to open its task.
 
-## Export
+## Period
 
-Click **Export CSV** to download the current (filtered) history as a `.csv` file for use in a spreadsheet or a report.
+The history shows the **last 30 days** by default. You can also choose the last 7 or 90 days, the last 12 months, or all time.
 
-## Print
+## Search and filters
 
-Click **Print** to open a print-friendly view of the execution history.
+Search the history by task, or filter it by **area** and **device**, combined as *Area OR device* or *Area AND device*, like in the [Tasks](./tasks#search-and-filters) tab.
+
+## Columns, export and print
+
+The ⋮ menu holds:
+
+- **Columns**: choose which columns are shown. The **Areas** and **Devices** columns start hidden
+- **Export CSV**: download the records currently shown as a `.csv` file, for a spreadsheet or a report
+- **Print**: open a print-friendly view of the history
+
+## On phones
+
+On phones, the records are a list grouped by day (**Today**, **Yesterday**, then the date), each with the time, who completed it and whether it was on time.
+
+## Undoing a completion
+
+[Reopening a task](./tasks#reopening-a-task) removes its completion record from the history.

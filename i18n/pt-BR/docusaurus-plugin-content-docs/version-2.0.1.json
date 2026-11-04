@@ -1,0 +1,18 @@
+{
+  "version.label": {
+    "message": "2.0.1",
+    "description": "The label for version 2.0.1"
+  },
+  "sidebar.docsSidebar.category.Installation": {
+    "message": "Instalação",
+    "description": "The label for category 'Installation' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Features": {
+    "message": "Funcionalidades",
+    "description": "The label for category 'Features' in sidebar 'docsSidebar'"
+  },
+  "sidebar.docsSidebar.category.Development": {
+    "message": "Desenvolvimento",
+    "description": "The label for category 'Development' in sidebar 'docsSidebar'"
+  }
+}

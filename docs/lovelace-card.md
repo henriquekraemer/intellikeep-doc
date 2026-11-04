@@ -5,37 +5,70 @@ title: Lovelace Card
 
 # Lovelace Card
 
-IntelliKeep ships with a custom Lovelace card that shows due and overdue tasks in a compact form on your dashboard.
+IntelliKeep ships with a dashboard card that shows how many tasks are overdue and due today, lists the most urgent open tasks with a checkbox to complete them, and links to the panel.
+
+<img
+  src={require('@site/static/img/screenshots/card.png').default}
+  alt="Dashboard card listing an overdue task, a task due today and two upcoming tasks"
+  className="ik-screenshot ik-screenshot--card"
+/>
 
 ## Adding the card
 
-On your Home Assistant dashboard, add a new card and pick **Custom: IntelliKeep Card**. You can also add it by hand in YAML mode:
+On a dashboard, click **Add card** and pick **IntelliKeep Card**. You can set its options in the visual editor, or add it in YAML:
 
 ```yaml
 type: custom:intellikeep-card
-title: IntelliKeep
-max_tasks: 5
-show_linked_entities: true
+title: Home maintenance
+max_tasks: 3
 show_description: false
+show_linked_entities: false
 ```
+
+The card follows the language of your Home Assistant profile (English, Portuguese or Spanish).
 
 ## Configuration options
 
 | Option | Type | Default | Description |
 |---|---|---|---|
-| `title` | string | `IntelliKeep` | Card title displayed in the header |
-| `max_tasks` | number | `5` | Maximum number of tasks to display |
-| `show_linked_entities` | boolean | `true` | Show the linked area/device label on each task |
-| `show_description` | boolean | `false` | Show the task description text |
-| `filter_priority` | list | — | Only show tasks with these priorities: `low`, `medium`, `high`, `critical` |
-| `filter_status` | list | — | Only show tasks with these statuses: `pending`, `due`, `overdue`, `completed`, `snoozed` |
+| `title` | string | "Home maintenance", in your language | Card title |
+| `max_tasks` | number | `3` | How many tasks to list (1–50) |
+| `show_description` | boolean | `false` | Show each task's description under its name |
+| `show_linked_entities` | boolean | `false` | Show the areas and devices each task is linked to |
+| `filter_priority` | list | all | YAML only. List only these priorities, e.g. `[critical, high]` |
+| `filter_status` | list | open tasks | YAML only. List only these statuses: `pending`, `due`, `overdue`, `completed` |
 
-## Display
+For example, a card for urgent work only:
 
-The card sorts tasks by urgency, with overdue ones first and the rest by due date. Each row shows:
-- Priority color bar
-- Task name
-- Due date, or an "Overdue" label
-- Linked entity, when `show_linked_entities` is `true`
+```yaml
+type: custom:intellikeep-card
+title: Urgent
+max_tasks: 5
+filter_priority: [critical, high]
+filter_status: [due, overdue]
+```
 
-Clicking a row opens the full task detail in the IntelliKeep panel.
+## What the card shows
+
+- **Header**: the title and a summary such as *1 overdue · 1 due today*, or how many tasks are open when none is urgent
+- **Tasks**: the open tasks, the nearest due date first, then by priority. Each one has a checkbox and the same due chip as the panel (*3 days overdue*, *Today, 7:00 PM*, *Wed, Oct 21*)
+- **Footer**: **View all N tasks** opens the IntelliKeep panel
+
+Ticking a checkbox completes the task, recording the Home Assistant user who did it, and shows a message with **Undo**.
+
+## YAML-mode dashboards
+
+IntelliKeep registers the card resource automatically when dashboards are managed from the UI (storage mode, the default). If your dashboards are configured in YAML, add the resource yourself:
+
+```yaml
+lovelace:
+  resources:
+    - url: /intellikeep_static/intellikeep-card.js
+      type: module
+```
+
+Without it, the dashboard shows *Custom element doesn't exist: intellikeep-card*.
+
+:::note Changed in 2.0
+The card used to list 10 tasks and include completed ones. To get that back, set `max_tasks: 10` and `filter_status: [pending, due, overdue, completed]`. See [Upgrading from 1.x](./installation/upgrading).
+:::
