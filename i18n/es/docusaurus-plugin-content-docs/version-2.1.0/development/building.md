@@ -45,7 +45,7 @@ custom_components/intellikeep/frontend/intellikeep-card.js
 custom_components/intellikeep/frontend/intellikeep-panel.js
 ```
 
-Estos paquetes se incluyen en el repositorio porque HACS instala la integración directamente desde él. Después de cualquier cambio en el frontend, vuelve a compilarlos y haz commit de ellos.
+Estos paquetes se incluyen en el repositorio porque HACS y el Marketplace instalan la integración directamente desde él. Después de cualquier cambio en el frontend, vuelve a compilarlos y haz commit de ellos.
 
 ## Desplegar en una instancia de HA basada en Docker
 

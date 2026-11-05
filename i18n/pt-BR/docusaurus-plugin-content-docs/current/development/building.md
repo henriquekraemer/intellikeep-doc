@@ -45,7 +45,7 @@ custom_components/intellikeep/frontend/intellikeep-card.js
 custom_components/intellikeep/frontend/intellikeep-panel.js
 ```
 
-Esses bundles ficam versionados no repositório, porque o HACS instala a integração direto dele. Depois de qualquer mudança no frontend, compile de novo e faça commit deles.
+Esses bundles ficam versionados no repositório, porque o HACS e o Marketplace instalam a integração direto dele. Depois de qualquer mudança no frontend, compile de novo e faça commit deles.
 
 ## Publicando em uma instância do HA baseada em Docker
 

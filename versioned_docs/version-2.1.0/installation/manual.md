@@ -5,7 +5,7 @@ title: Manual Installation
 
 # Manual Installation
 
-Use manual installation if you prefer not to use HACS.
+Use manual installation if you prefer not to use HACS or the Marketplace.
 
 ## Steps
 

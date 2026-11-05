@@ -39,7 +39,7 @@ O IntelliKeep é uma integração personalizada, gratuita e de código aberto pa
 
 ## Início rápido
 
-1. [Instale via HACS](./installation/hacs) (recomendado)
+1. [Instale via HACS ou Marketplace](./installation/hacs) (recomendado)
 2. Reinicie o Home Assistant
 3. Adicione a integração em **Configurações → Dispositivos & serviços**
 4. Abra o painel do IntelliKeep na barra lateral e crie sua primeira tarefa
