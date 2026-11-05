@@ -45,7 +45,7 @@ custom_components/intellikeep/frontend/intellikeep-card.js
 custom_components/intellikeep/frontend/intellikeep-panel.js
 ```
 
-These bundles are committed to the repository, because HACS installs the integration straight from it. After any frontend change, rebuild and commit them.
+These bundles are committed to the repository, because HACS and the Marketplace install the integration straight from it. After any frontend change, rebuild and commit them.
 
 ## Deploying to a Docker-based HA instance
 
